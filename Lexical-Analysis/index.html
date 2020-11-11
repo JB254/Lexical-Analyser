@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  <title>Lexical Analyser</title>
+  <!-- Import the main script file -->
+</head>
+
+<body>
+	<div class="container">
+		<h2>Lexical Analysis</h2>
+		<div class="row">
+			<div class="col">
+				<div class="form-row">
+					<label for="exampleFormControlTextarea1">Source Program</label>
+					<textarea class="form-control" id="source-program" rows="12"></textarea>
+				</div>
+				<div>
+					<a href="#analysisResult" class="btn btn-lg btn-primary m-3" id="analyse-btn">Analyse</a>
+				</div>
+					
+			</div>
+
+			<div class="col">
+				<label for="exampleFormControlTextarea1">Sample</label>
+				<pre class="mt-2 text-left border">
+	using System;
+
+	namespace HelloWorld
+	{
+	    class Program
+	    {
+	        static void Main(string[] args)
+	        {
+	        	int age = 10;
+	            Console.WriteLine(age);
+	        }
+	    }
+	}
+				</pre>
+			</div>
+		</div>
+
+		<hr/>
+
+		<div id="analysisResult" class="row">
+			<div class="col-12">
+				<a href="#" class="btn btn-lg btn-primary m-3" id="source-btn">Source Program</a>
+				<a href="" class="btn btn-sm btn-danger m-3" id="cancel-btn">Clear</a>
+			</div>
+			<div class="col">
+				<div id="charts">
+					<div id="barChart"></div>	
+					<div id="pieChart"></div>	
+				</div>	
+			</div>
+			<div class="col">
+				<h4 id="result" class="display-4 text-danger"></h4>
+				<div class="table-responsive">
+					<table class="table table-hover">
+					  <thead class="bg-dark text-light">
+					    <tr>
+					      <th>#</th>
+					      <th>Class</th>
+					      <th>Value</th>
+					      <th>Position</th>
+					    </tr>
+					  </thead>
+					  <tfoot>
+					    <tr>
+					      <th>#</th>
+					      <th>Class</th>
+					      <th>Value</th>
+					      <th>Position</th>
+					    </tr>
+					  </tfoot>
+					  <tbody id="table-data">
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		</div>
+
+  <script src="assets/js/jquery-slim.min.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="assets/js/plotly.js" type="text/javascript"></script>
+  <script src="tokenClass.js" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
